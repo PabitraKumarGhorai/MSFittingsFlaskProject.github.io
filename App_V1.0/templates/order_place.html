@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.S Fittings.com/order_place</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='Images/logo.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/order_place.css')}}" >
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="{{url_for('static',filename='Images/logo.png')}}"  class="logo">
+    
+            <ul>
+              <li><a  href="/">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a class="active" href="#">Order Place</a></li>
+              <li><a href="order_status.html">Order Status</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+          <br><br><br>
+
+          <div class="row">
+            <div class="col">
+              <h1>Our Products</h1>
+              
+              <br>
+              <p>
+                Our manufacturing plant is well equipped with sophisticated technologies and latest machineries to produce high quality butt weld/socket weld/screwed pipe fittings and flanges. 
+                Our product includes Elbows, Tees, Reducers, Swage Nipples, Nipples, Cross, Couplings, Plugs, Caps, Unions, Stub Ends and various types of O-lets. Flanges include Slip On; Socket Weld; 
+                Screwed; Well Neck, Blind, Spectacle Blind and Lap Joint. For more information visit our product catalogue page.
+              </p> 
+              <br>
+              <br><br><br>
+              <a href="http://www.msfittings.com/about-us">Read More</a>
+      
+      
+            </div>
+            <div class="col">
+              <form method="POST" class="feature_form" action="" > 
+                Client Code : <input class="box" type="text" placeholder="Enter Client Code" name="Client_code" />
+                <br>
+                <br>
+                Client Name : <input class="box" type="gender" placeholder="Enter Client Name" name="Client_name" />
+                <br>
+                <br>
+                Consignee : <input class="box" type="text" placeholder="Enter Consignee Details" name="Consignee" />
+                <br>
+                <br>
+                Order Quantity : <input  class="box" type="number"  placeholder="Enter Order Quantity" name="Order_quantity" />
+                <br>
+                <br>
+                Order Status : <input class="box" type="text" placeholder="Complete / Pending / Placed" name="Order_status" />
+                <br>
+                <br>
+                Order Date : <input class="box" type="text" placeholder="DD-MM-YYYY" name="Order_date" />
+                <br> <br>
+                <input class="submit_button" type="submit">
+              </form>
+            </div>
+
+          <div class="container">
+            
+          </div>
+          
+    </div>
+    <br><br><br><br><br><br>
+    <div class="footer">
+      <h3><i class="fa fa-copyright" aria-hidden="true"></i>Developed by :  Pabitra Kumar Ghorai</h3>
+    </div>
+    
+</body>
+</html>

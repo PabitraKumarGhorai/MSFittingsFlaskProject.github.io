@@ -1,0 +1,22 @@
+@app.route('/order_status.html', methods=['GET', 'POST'])
+def search():
+    if request.method == 'POST' :
+        result=request.form
+        Client_code = result['Client_code']
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM order_details WHERE Client_code = ' "+Client_code+" ' ")
+        r=cur.fetchone()
+
+        mysql.connection.commit()
+        cur.close()
+        return render_template('search_result.html', r=r)
+    return render_template('order_status.html')
+
+@app.route('/order_status.html')
+def search_details():
+    cur = mysql.connection.cursor()
+    Client_code = '4587'
+    result=cur.execute("SELECT * FROM order_details WHERE Client_code ='SD100'")
+    if result>0:
+        searchDetails = cur.fetchall()
+        return render_template('order_status.html', searchDetails=searchDetails)
